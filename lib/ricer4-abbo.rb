@@ -1,4 +1,4 @@
-require "ricer4"
+require "ricer4-list"
 module Ricer4
   module Plugins
     module Abbo

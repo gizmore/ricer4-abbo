@@ -7,4 +7,8 @@
 /pkg/
 /spec/reports/
 /tmp/
+
 .project
+.byebug_history
+/log/
+ricer4.*.yml
