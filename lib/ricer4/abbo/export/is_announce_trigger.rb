@@ -25,16 +25,16 @@ module Ricer4::Extend::IsAnnounceTrigger
   
       if options[:user]
         has_usage '<boolean>', :scope => :user, :permission => options[:user], :function => :execute_toggle_announce_user 
-        def execute_toggle_announce_user(boolean)
-          get_plugin('Conf/ConfUser').set_var(self, :announce, boolean)
-        end
+        # def execute_toggle_announce_user(boolean)
+          # get_plugin('Conf/ConfUser').set_var(self, :announce, boolean)
+        # end
       end
 
       if options[:channel]
         has_usage '<boolean>', :scope => :channel, :permission => options[:channel], :function => :execute_toggle_announce_channel
-        def execute_toggle_announce_channel(boolean)
-          get_plugin('Conf/ConfChannel').set_var(self, :announce, boolean)
-        end
+        # def execute_toggle_announce_channel(boolean)
+          # get_plugin('Conf/ConfChannel').set_var(self, :announce, boolean)
+        # end
       end
       
       def announce_channels(no_current_scope=false, &block)
