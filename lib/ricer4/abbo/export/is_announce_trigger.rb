@@ -20,8 +20,8 @@ module Ricer4::Extend::IsAnnounceTrigger
   
       trigger_is trigger_name
       
-      has_setting name: :announce, type: :boolean, scope: :user,    permission: options[:user],    default: options[:user_default]    if options[:user]
-      has_setting name: :announce, type: :boolean, scope: :channel, permission: options[:channel], default: options[:channel_default] if options[:channel]
+      has_setting name: :announce, type: :boolean, scope: :channel, permission: options[:channel], default: options[:user_default] if options[:channel]
+      has_setting name: :announce, type: :boolean, scope: :user,    permission: options[:user],    default: options[:user_default] if options[:user]
   
       if options[:user]
         has_usage '<boolean>', :scope => :user, :permission => options[:user], :function => :execute_toggle_announce_user 
